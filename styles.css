@@ -119,3 +119,11 @@ body.night .text-link{color:#e8c478}
 .pub-list article[hidden]{display:none!important}
 .work-tab:focus-visible,.theme-toggle:focus-visible,.menu:focus-visible,.btn:focus-visible,.work-card:focus-visible{outline:3px solid #e4b955;outline-offset:3px}
 @media(max-width:900px){.nav{gap:10px}.brand{margin-right:auto}.theme-toggle{order:1}.menu{order:2}}
+
+/* India representation visual: replace flag with Ashoka Lion Capital */
+.emblem-display{margin:0;min-height:330px;padding:28px 18px;background:radial-gradient(circle at 50% 45%,#285c47,#083a2c 75%);border:1px solid #bd9b5480;border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 15px 35px #05251b25}
+.emblem-display img{height:245px;max-width:100%;width:auto;object-fit:contain;filter:drop-shadow(0 6px 14px #0004)}
+.emblem-display figcaption{font-size:12px;letter-spacing:.1em;color:#efd69c;margin-top:14px;text-align:center}
+.representation-layout{display:grid;grid-template-columns:minmax(220px,340px) 1fr;align-items:center;gap:28px;margin:24px 0}
+.representation-layout .card{min-height:0}
+@media(max-width:800px){.emblem-display{min-height:260px}.emblem-display img{height:190px}.representation-layout{grid-template-columns:1fr}.representation-layout .emblem-display{max-width:360px;width:100%}}
