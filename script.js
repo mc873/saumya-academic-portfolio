@@ -9,3 +9,12 @@ if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduc
 const researchChips=[...document.querySelectorAll('.filter-chip')];researchChips.forEach(chip=>chip.addEventListener('click',()=>{researchChips.forEach(c=>{c.classList.toggle('active',c===chip);c.setAttribute('aria-pressed',String(c===chip))});document.querySelectorAll('.research-results [data-category]').forEach(card=>{card.hidden=chip.dataset.filter!=='all'&&!card.dataset.category.split(' ').includes(chip.dataset.filter)})}));
 const publicationYear=document.getElementById('publication-year');
 if(publicationYear&&pubSearch){const applyFilters=()=>{let count=0;document.querySelectorAll('.pub-list article').forEach(item=>{const matchesText=item.textContent.toLowerCase().includes(pubSearch.value.trim().toLowerCase());const matchesYear=publicationYear.value==='all'||item.querySelector('span')?.textContent.trim()===publicationYear.value;item.hidden=!(matchesText&&matchesYear);if(!item.hidden)count++});document.getElementById('search-count').textContent=count+' contribution'+(count===1?'':'s')+' found'};pubSearch.addEventListener('input',applyFilters);publicationYear.addEventListener('change',applyFilters);applyFilters()}
+
+/* Public content sync: GitHub Pages serves site-content.json after an authorized commit. */
+if(document.querySelector('.hero-cinematic')){
+fetch('site-content.json',{cache:'no-store'}).then(response=>response.ok?response.json():null).then(data=>{
+if(!data||typeof data!=='object')return;
+const update=(selector,key)=>{const el=document.querySelector(selector);if(el&&typeof data[key]==='string')el.textContent=data[key]};
+update('.hero-cinematic h1','name');update('.hero-cinematic .hero-kicker','tagline');update('.hero-cinematic .lead','intro');update('.hero-cinematic .hero-primary','buttonLabel');update('.about-grid p:not(.eyebrow)','aboutText');update('#representation .two-col > div > p:not(.eyebrow)','representationText');
+}).catch(()=>{});
+}
