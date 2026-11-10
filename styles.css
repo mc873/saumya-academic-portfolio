@@ -55,3 +55,25 @@
 .hero-cinematic .actions{flex-direction:row;gap:9px;margin-top:18px}
 .hero-cinematic .btn{font-size:12px;padding:11px 8px}
 }
+
+/* Final layout: genuine split panels, no photo behind the text */
+.hero.hero-cinematic{background:#073b2c!important;min-height:0!important;overflow:hidden}
+.hero-cinematic .hero-grid{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:stretch!important;gap:0!important;min-height:560px!important;width:100%;max-width:none}
+.hero-cinematic .hero-copy{width:100%!important;max-width:690px!important;min-width:0;margin-left:auto;padding:75px 45px 75px max(25px,calc((100vw - 1160px)/2))!important;align-self:center}
+.hero-cinematic .hero-copy:after{display:none!important}
+.hero-cinematic .hero-portrait-panel{min-width:0;min-height:560px;overflow:hidden;position:relative}
+.hero-cinematic .hero-portrait-panel img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 24%}
+.hero-cinematic h1{font-size:clamp(2.7rem,4.2vw,5.2rem)!important;overflow-wrap:break-word}
+.hero-cinematic .lead{max-width:530px}
+@media(max-width:800px){
+.hero-cinematic .hero-grid{grid-template-columns:1fr!important;min-height:0!important}
+.hero-cinematic .hero-copy{max-width:none!important;padding:34px 22px 30px!important}
+.hero-cinematic .hero-portrait-panel{min-height:0;height:430px}
+.hero-cinematic .hero-portrait-panel img{object-position:center 20%}
+.hero-cinematic h1{font-size:clamp(2.6rem,8vw,4rem)!important}
+}
+@media(max-width:480px){
+.hero-cinematic .hero-copy{padding:30px 20px 26px!important}
+.hero-cinematic .hero-portrait-panel{height:330px}
+.hero-cinematic h1{font-size:clamp(2.4rem,9vw,3.2rem)!important}
+}
