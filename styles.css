@@ -77,3 +77,9 @@
 .hero-cinematic .hero-portrait-panel{height:330px}
 .hero-cinematic h1{font-size:clamp(2.4rem,9vw,3.2rem)!important}
 }
+
+/* Subtle campus background on copy side; portrait remains clear */
+.hero-cinematic .hero-copy{position:relative;isolation:isolate;background:#073b2c}
+.hero-cinematic .hero-copy:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,43,30,.96),rgba(4,43,30,.87)),url("saumya-hero.jpg") left center/cover no-repeat;opacity:1;pointer-events:none}
+.hero-cinematic .hero-portrait-panel img{filter:none}
+@media(max-width:800px){.hero-cinematic .hero-copy:before{background:linear-gradient(rgba(4,43,30,.93),rgba(4,43,30,.89)),url("saumya-hero.jpg") center/cover no-repeat}}
