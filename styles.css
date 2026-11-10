@@ -9,77 +9,46 @@
 @media(max-width:800px){.about-photo{max-width:340px;height:340px}}
 @media(max-width:480px){.about-photo{height:310px}.nav{min-height:66px}.menu{min-width:44px;min-height:44px}nav{top:66px;max-height:calc(100dvh - 66px);overflow-y:auto}nav a{font-size:16px;padding:12px 14px}}
 
-/* Approved cinematic campus homepage */
-.topbar{background:#062f23}.brand{gap:12px}.book-mark{font-family:Georgia,serif;font-size:40px;color:#d9b76c;line-height:1}.brand-words{display:flex;flex-direction:column;font-size:19px;line-height:1.2}.brand-words small{font:12px/1.4 system-ui,sans-serif;letter-spacing:.12em;color:#d7dfd8;font-weight:400;margin-top:3px}
-.hero.hero-cinematic{position:relative;min-height:660px;background:linear-gradient(90deg,rgba(2,35,24,.94) 0%,rgba(3,42,30,.88) 29%,rgba(4,39,28,.48) 53%,rgba(3,32,24,.06) 80%),url("saumya-hero.jpg") 70% 32%/cover no-repeat,#073c2b;color:white}
-.hero-cinematic .hero-grid{min-height:660px;display:flex;align-items:center}
-.hero-cinematic .hero-copy{width:min(58%,670px);padding:85px 0 95px;position:relative;z-index:1}
-.hero-cinematic .eyebrow{color:#e6c783;letter-spacing:.18em}
-.hero-cinematic h1{color:#fff;font-size:clamp(3.4rem,5.8vw,6rem);margin:16px 0 20px;line-height:1.06}
-.hero-cinematic .gold{color:#e6c783}
-.hero-cinematic .rule{background:#d5ad5b}
-.hero-cinematic .hero-role{font-size:clamp(1.15rem,2vw,1.7rem);letter-spacing:.02em;margin:0 0 22px;color:#f6f4eb}
-.hero-cinematic .lead{font-family:system-ui,sans-serif;font-size:clamp(1rem,1.45vw,1.22rem);line-height:1.8;color:#edf3ed;max-width:590px}
-.hero-cinematic .actions{margin-top:32px}
-.hero-cinematic .btn{min-width:180px;border-radius:10px}
-.hero-cinematic .outline{border:1.5px solid #f1d38d;color:#fff;background:#073d2b66}
-.hero-cinematic .cv-pending{background:linear-gradient(130deg,#f3d992,#d7a83f);color:#173e2c;cursor:default;display:inline-flex;flex-direction:column;gap:0;line-height:1.2}
-.hero-cinematic .cv-pending small{font-size:10px;letter-spacing:.04em}
-@media(max-width:1050px){.brand-words{font-size:15px}.brand-words small{font-size:10px}.hero.hero-cinematic{background-position:62% center}}
-@media(max-width:800px){.hero.hero-cinematic{min-height:0;background:linear-gradient(180deg,rgba(2,35,24,.94) 0%,rgba(3,43,30,.84) 52%,rgba(4,41,30,.12) 100%),url("saumya-hero.jpg") center 25%/cover no-repeat,#073d2b}.hero-cinematic .hero-grid{min-height:690px;align-items:flex-start}.hero-cinematic .hero-copy{width:100%;padding:48px 0 230px}.hero-cinematic h1{font-size:clamp(2.9rem,9vw,4.8rem)}.hero-cinematic .lead{max-width:550px}.hero-cinematic .actions{flex-direction:row}.hero-cinematic .btn{min-width:0}.book-mark{font-size:30px}}
-@media(max-width:480px){.brand-words{font-size:13px}.brand-words small{font-size:10px}.hero.hero-cinematic{background:linear-gradient(180deg,#062e23 0%,rgba(5,48,34,.95) 47%,rgba(5,48,34,.4) 72%,rgba(5,48,34,.04) 100%),url("saumya-hero.jpg") center bottom/auto 57% no-repeat,#073d2b}.hero-cinematic .hero-grid{min-height:740px}.hero-cinematic .hero-copy{padding:35px 0 325px}.hero-cinematic h1{font-size:clamp(2.55rem,10vw,3.5rem);overflow-wrap:anywhere}.hero-cinematic .hero-role{font-size:16px}.hero-cinematic .lead{font-size:14px;line-height:1.65}.hero-cinematic .actions{gap:10px;flex-direction:row}.hero-cinematic .btn{font-size:12px;min-width:0;flex:1;padding:12px 9px}.hero-cinematic .eyebrow{font-size:10px}}
 
-/* Hero refinement: protect portrait from text overlay */
-@media(min-width:801px){
-.hero.hero-cinematic{background:linear-gradient(90deg,#052d22 0%,#073b2c 43%,rgba(5,42,30,.9) 54%,rgba(5,42,30,.12) 77%),url("saumya-hero.jpg") right 24% center/auto 100% no-repeat,#073b2c}
-.hero-cinematic .hero-copy{width:48%;max-width:590px}
-.hero-cinematic h1{font-size:clamp(3.2rem,5vw,5.3rem);overflow-wrap:anywhere}
-}
+/* Clean continuous photographic hero. Portrait remains undimmed. */
+.topbar{background:#062f23}
+.brand{gap:12px}.book-mark{font:38px/1 Georgia,serif;color:#d9b76c}.brand-words{display:flex;flex-direction:column;font-size:19px;line-height:1.2}.brand-words small{font:12px/1.4 system-ui,sans-serif;letter-spacing:.1em;color:#e2e9e1;font-weight:400}
+.hero.hero-cinematic{position:relative;isolation:isolate;background:#073b2c;color:#fff;overflow:hidden}
+.hero-cinematic::before{content:"";position:absolute;inset:0 0 0 35%;z-index:-2;background:url("saumya-hero.jpg") center 25%/cover no-repeat}
+.hero-cinematic::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#073b2c 0%,#073b2c 30%,rgba(7,59,44,.96) 39%,rgba(7,59,44,.68) 51%,rgba(7,59,44,.12) 66%,transparent 80%);pointer-events:none}
+.hero-cinematic .hero-grid{display:block;min-height:630px;width:min(1160px,calc(100% - 40px));max-width:1160px}
+.hero-cinematic .hero-copy{position:relative;width:min(52%,600px);padding:92px 0 90px;background:transparent}
+.hero-cinematic .hero-copy::before,.hero-cinematic .hero-copy::after{display:none}
+.hero-cinematic .eyebrow{color:#e6c783;letter-spacing:.17em}
+.hero-cinematic h1{color:white;font-size:clamp(3.1rem,5.3vw,5.6rem);line-height:1.07;overflow-wrap:break-word;margin:16px 0 20px}
+.hero-cinematic h1 .gold{color:#e6c783}
+.hero-cinematic .rule{background:#d5ad5b}
+.hero-cinematic .hero-role{font-size:clamp(1.05rem,1.8vw,1.55rem);color:#f4f4e9;margin:0 0 18px}
+.hero-cinematic .lead{font-family:system-ui,sans-serif;font-size:clamp(1rem,1.4vw,1.18rem);line-height:1.7;color:#f3f6ef;max-width:520px}
+.hero-cinematic .actions{margin-top:28px}
+.hero-cinematic .btn{min-width:155px;border-radius:9px}
+.hero-cinematic .outline{border:1.5px solid #edcf89;color:white;background:rgba(3,40,28,.35)}
+.hero-cinematic .cv-pending{background:linear-gradient(130deg,#f3d992,#d7a83f);color:#173e2c;cursor:default;display:inline-flex;flex-direction:column;gap:0;line-height:1.2}
+.hero-cinematic .cv-pending small{font-size:10px}
+@media(max-width:1000px){.brand-words{font-size:15px}.brand-words small{font-size:10px}.hero-cinematic .hero-copy{width:50%}.hero-cinematic h1{font-size:clamp(2.7rem,5vw,4.5rem)}}
 @media(max-width:800px){
-.hero.hero-cinematic{background:#073b2c}
-.hero-cinematic .hero-grid{min-height:0;display:flex;flex-direction:column}
-.hero-cinematic .hero-copy{width:100%;padding:45px 0 28px}
-.hero-cinematic .hero-copy:after{content:"";display:block;width:100%;height:360px;margin-top:28px;border-radius:18px;background:url("saumya-hero.jpg") center 23%/cover no-repeat;box-shadow:0 10px 25px #0003}
-.hero-cinematic .actions{margin-top:22px}
-.hero-cinematic h1{font-size:clamp(2.7rem,8vw,4.2rem)}
+.hero-cinematic::before{inset:0;background:url("saumya-hero.jpg") center bottom/auto 53% no-repeat}
+.hero-cinematic::after{background:linear-gradient(180deg,#073b2c 0%,#073b2c 38%,rgba(7,59,44,.94) 49%,rgba(7,59,44,.3) 66%,transparent 81%)}
+.hero-cinematic .hero-grid{min-height:770px;width:calc(100% - 40px)}
+.hero-cinematic .hero-copy{width:100%;padding:40px 0 360px}
+.hero-cinematic h1{font-size:clamp(2.8rem,8vw,4.3rem)}
+.hero-cinematic .lead{max-width:550px}
+.book-mark{font-size:30px}
 }
 @media(max-width:480px){
-.hero.hero-cinematic{background:#073b2c}
-.hero-cinematic .hero-grid{min-height:0}
-.hero-cinematic .hero-copy{padding:30px 0 20px}
-.hero-cinematic .hero-copy:after{height:350px;margin-top:24px;background-position:center 20%}
-.hero-cinematic h1{font-size:clamp(2.35rem,9vw,3.15rem);margin:10px 0 16px}
-.hero-cinematic .rule{margin-bottom:15px}
+.brand-words{font-size:13px}.brand-words small{font-size:10px}
+.hero-cinematic::before{background-size:auto 49%;background-position:center bottom}
+.hero-cinematic::after{background:linear-gradient(180deg,#073b2c 0%,#073b2c 41%,rgba(7,59,44,.96) 51%,rgba(7,59,44,.22) 69%,transparent 84%)}
+.hero-cinematic .hero-grid{min-height:690px}
+.hero-cinematic .hero-copy{padding:28px 0 325px}
+.hero-cinematic h1{font-size:clamp(2.4rem,9vw,3.25rem);margin:10px 0 16px}
 .hero-cinematic .hero-role{font-size:15px;margin-bottom:12px}
 .hero-cinematic .lead{font-size:14px;line-height:1.55}
 .hero-cinematic .actions{flex-direction:row;gap:9px;margin-top:18px}
-.hero-cinematic .btn{font-size:12px;padding:11px 8px}
+.hero-cinematic .btn{font-size:12px;min-width:0;flex:1;padding:11px 8px}
 }
-
-/* Final layout: genuine split panels, no photo behind the text */
-.hero.hero-cinematic{background:#073b2c!important;min-height:0!important;overflow:hidden}
-.hero-cinematic .hero-grid{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:stretch!important;gap:0!important;min-height:560px!important;width:100%;max-width:none}
-.hero-cinematic .hero-copy{width:100%!important;max-width:690px!important;min-width:0;margin-left:auto;padding:75px 45px 75px max(25px,calc((100vw - 1160px)/2))!important;align-self:center}
-.hero-cinematic .hero-copy:after{display:none!important}
-.hero-cinematic .hero-portrait-panel{min-width:0;min-height:560px;overflow:hidden;position:relative}
-.hero-cinematic .hero-portrait-panel img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 24%}
-.hero-cinematic h1{font-size:clamp(2.7rem,4.2vw,5.2rem)!important;overflow-wrap:break-word}
-.hero-cinematic .lead{max-width:530px}
-@media(max-width:800px){
-.hero-cinematic .hero-grid{grid-template-columns:1fr!important;min-height:0!important}
-.hero-cinematic .hero-copy{max-width:none!important;padding:34px 22px 30px!important}
-.hero-cinematic .hero-portrait-panel{min-height:0;height:430px}
-.hero-cinematic .hero-portrait-panel img{object-position:center 20%}
-.hero-cinematic h1{font-size:clamp(2.6rem,8vw,4rem)!important}
-}
-@media(max-width:480px){
-.hero-cinematic .hero-copy{padding:30px 20px 26px!important}
-.hero-cinematic .hero-portrait-panel{height:330px}
-.hero-cinematic h1{font-size:clamp(2.4rem,9vw,3.2rem)!important}
-}
-
-/* Subtle campus background on copy side; portrait remains clear */
-.hero-cinematic .hero-copy{position:relative;isolation:isolate;background:#073b2c}
-.hero-cinematic .hero-copy:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,43,30,.96),rgba(4,43,30,.87)),url("saumya-hero.jpg") left center/cover no-repeat;opacity:1;pointer-events:none}
-.hero-cinematic .hero-portrait-panel img{filter:none}
-@media(max-width:800px){.hero-cinematic .hero-copy:before{background:linear-gradient(rgba(4,43,30,.93),rgba(4,43,30,.89)),url("saumya-hero.jpg") center/cover no-repeat}}
