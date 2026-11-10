@@ -177,3 +177,57 @@ body.night .filter-chip{background:#1b3a2f;color:#fff}
 body.night .filter-chip.active{background:#cfae6b;color:#082b20}
 @media(max-width:900px){.about-page-grid,.contact-layout{grid-template-columns:1fr;gap:30px}.profile-frame{max-width:420px}.compact-emblem{grid-template-columns:140px 1fr}.page-hero{padding:48px 0 55px}}
 @media(max-width:600px){.page-hero{padding:34px 0 42px}.page-hero h1{font-size:2.65rem}.page-hero p:last-child{font-size:15px}.degree-card{grid-template-columns:1fr;padding:22px;gap:12px}.degree-year{width:90px;min-height:50px}.compact-emblem{grid-template-columns:1fr;gap:20px}.compact-emblem .emblem-display{width:120px;height:150px}.compact-emblem .emblem-display img{height:90px}.representation-copy{padding:22px!important}.profile-frame{height:360px}.contact-form-card{padding:24px}}
+
+/* Sage Green & Ivory redesign — unified across all eight pages */
+:root{--green:#355f43;--deep:#173f30;--gold:#b59a5d;--cream:#faf9f1;--ink:#233e31;--muted:#63766b}
+body{background:var(--cream);color:var(--ink)}
+.topbar{background:#fcfcf6!important;color:#203f2c!important;border-bottom:1px solid #d7dfca;box-shadow:0 4px 22px #294e3020}
+.nav{min-height:76px}.brand,.brand-words{color:#193d2c!important}.monogram{color:#476f38!important}.brand-words small{color:#71836f!important}
+nav a{color:#274332!important}nav a:hover,nav a:focus-visible,nav a[aria-current="page"]{color:#315c35!important}
+nav a[aria-current="page"]{border-bottom:3px solid #527d45;padding-bottom:5px}
+.menu,.theme-toggle{color:#31543c!important;border-color:#a9b9a5!important}
+.hero.hero-cinematic{background:linear-gradient(110deg,#fcfbf1 0%,#f1f3df 100%)!important;color:#193c2b!important}
+.hero-cinematic::before{inset:0 0 0 53%!important;background:url("saumya-hero.jpg") center 27%/cover no-repeat!important;clip-path:ellipse(91% 95% at 96% 50%)}
+.hero-cinematic::after{background:linear-gradient(90deg,#faf9ed 0%,#f5f5e7 42%,#e5ebd51c 64%,transparent 78%)!important}
+.hero-cinematic .hero-grid{min-height:560px}.hero-cinematic .hero-copy{max-width:620px;position:relative;z-index:1}
+.hero-cinematic .hero-kicker,.hero-cinematic .hero-role{color:#3f6348!important}
+.hero-cinematic h1{color:#153d2a!important}.hero-cinematic .gold{color:#77945c!important}
+.hero-cinematic .lead{color:#3e5746!important}.hero-cinematic .rule{background:#a9bc8e}
+.hero-cinematic .btn.hero-primary{background:linear-gradient(120deg,#416c47,#234d34)!important;color:white!important;border-color:#416c47!important}
+.hero-cinematic .btn.outline{color:#244d36!important;border-color:#54765b!important;background:#fffff6b5}
+.hero-cinematic:before{pointer-events:none}
+.highlights{background:#f1f2e7!important;border-color:#dce3d3!important}
+.highlights-grid>div{border-color:#d2dec9}.highlights .symbol{color:#5d8054}.highlights strong{color:#284b34}
+.section{background:#faf9f1}.section.tinted,.tinted{background:#eff2e8!important}
+.section h2,.section h3{color:#234632}
+.card,.premium-card,.work-card,.degree-card,.pub-list article,.contact-form-card{background:#fffff9!important;border-color:#dce3d3!important;box-shadow:0 10px 26px #34583d12}
+.card-icon,.premium-card .card-icon{color:#3e6746!important;background:#e6eddb!important}
+.page-hero{background:radial-gradient(ellipse at 83% 12%,#d6e2cb 0%,#eef2e5 48%,#f9faf2 100%)!important;color:#1f4431!important;border-bottom:1px solid #d6e1d2}
+.page-hero h1{color:#1c422d!important}.page-hero p:last-child,.breadcrumbs{color:#4d6756!important}
+.page-hero:before,.page-hero:after{border-color:#8aaa7770}
+.eyebrow,.eyebrow.green{color:#688453!important}
+.research-banner{background:linear-gradient(110deg,#244e37,#487351)!important}
+.research-banner h2{color:#fff}
+.btn.primary,.filter-chip.active{background:#315d3d!important;color:white!important}
+.text-link{color:#386846!important;text-decoration-color:#8da873}
+.work-art{filter:saturate(.75)}
+.pub-list article>span,.degree-year{color:#345c3e}
+.degree-year{background:#e2eacd!important}
+.compact-emblem .emblem-display{background:radial-gradient(circle,#547c58,#244b38)!important}
+.representation-copy{background:#fffef8!important}
+.contact-option{background:#edf1e4!important}
+.contact{background:#2c593e!important}
+footer{background:#173b2b!important;color:#f0f4ea!important}
+body.night{--cream:#182c24;--ink:#e7eee4;--muted:#c6d4c6;background:#182c24}
+body.night .topbar{background:#1c3b2c!important;color:#fff!important}
+body.night .brand,body.night .brand-words,body.night nav a{color:#f0f5e9!important}
+body.night .brand-words small{color:#cddccc!important}
+body.night .section,body.night .section.tinted{background:#182c24!important}
+body.night .page-hero{background:linear-gradient(110deg,#204333,#31553d)!important}
+body.night .page-hero h1,body.night .page-hero p:last-child,body.night .breadcrumbs{color:#f2f6ea!important}
+body.night .section h2,body.night .section h3{color:#f1f4e8!important}
+body.night .card,body.night .premium-card,body.night .work-card,body.night .degree-card,body.night .pub-list article,body.night .contact-form-card,body.night .representation-copy{background:#244334!important;color:#f1f5e9!important;border-color:#47604a!important}
+body.night .card p,body.night .degree-card p{color:#c9d7cb!important}
+@media(max-width:900px){.hero-cinematic::before{inset:0 0 0 50%!important}.hero-cinematic::after{background:linear-gradient(90deg,#faf9ed 0%,#f5f5e7 34%,#e5ebd540 75%,transparent 100%)!important}}
+@media(max-width:800px){nav{background:#fbfcf4!important;border-bottom:1px solid #d7dfca}nav a{color:#21432f!important}body.night nav{background:#1c3b2c!important}.hero-cinematic::before{inset:49% 0 0!important;clip-path:none;border-radius:32px 32px 0 0;background-position:center 24%!important}.hero-cinematic::after{background:linear-gradient(180deg,#faf9ed 0%,#faf9ed 49%,transparent 55%)!important}.hero-cinematic .hero-grid{min-height:0;padding-bottom:320px}.hero-cinematic .hero-copy{padding:50px 0 20px}.hero-cinematic h1{font-size:clamp(3rem,9vw,4.5rem)}}
+@media(max-width:480px){.hero-cinematic .hero-grid{padding-bottom:280px}.hero-cinematic::before{inset:58% 0 0!important}.hero-cinematic::after{background:linear-gradient(180deg,#faf9ed 0%,#faf9ed 58%,transparent 65%)!important}.hero-cinematic .hero-copy{padding-top:38px}.hero-cinematic .hero-role{font-size:14px}.brand-words{font-size:13px!important}.nav{gap:8px}}
