@@ -231,3 +231,14 @@ body.night .card p,body.night .degree-card p{color:#c9d7cb!important}
 @media(max-width:900px){.hero-cinematic::before{inset:0 0 0 50%!important}.hero-cinematic::after{background:linear-gradient(90deg,#faf9ed 0%,#f5f5e7 34%,#e5ebd540 75%,transparent 100%)!important}}
 @media(max-width:800px){nav{background:#fbfcf4!important;border-bottom:1px solid #d7dfca}nav a{color:#21432f!important}body.night nav{background:#1c3b2c!important}.hero-cinematic::before{inset:49% 0 0!important;clip-path:none;border-radius:32px 32px 0 0;background-position:center 24%!important}.hero-cinematic::after{background:linear-gradient(180deg,#faf9ed 0%,#faf9ed 49%,transparent 55%)!important}.hero-cinematic .hero-grid{min-height:0;padding-bottom:320px}.hero-cinematic .hero-copy{padding:50px 0 20px}.hero-cinematic h1{font-size:clamp(3rem,9vw,4.5rem)}}
 @media(max-width:480px){.hero-cinematic .hero-grid{padding-bottom:280px}.hero-cinematic::before{inset:58% 0 0!important}.hero-cinematic::after{background:linear-gradient(180deg,#faf9ed 0%,#faf9ed 58%,transparent 65%)!important}.hero-cinematic .hero-copy{padding-top:38px}.hero-cinematic .hero-role{font-size:14px}.brand-words{font-size:13px!important}.nav{gap:8px}}
+
+
+/* Academic photography: replace abstract featured-work and teaching glyphs. 
+   Images from Unsplash, used under https://unsplash.com/license */
+.work-card .work-art{display:block!important;position:relative!important;width:100%!important;height:174px!important;min-height:174px!important;margin:0 0 20px!important;border-radius:14px!important;background-size:cover!important;background-position:center!important;overflow:hidden!important;font-size:0!important;line-height:0!important;color:transparent!important;box-shadow:0 8px 24px rgba(18,51,34,.12)}
+.work-card .work-art::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(23,63,48,.15),transparent 65%);pointer-events:none}
+.work-card .art-math{background-image:url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=80")!important}
+.work-card .art-bio{background-image:url("https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80")!important}
+.work-card .art-fluid{background-image:url("https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80")!important}
+.feature-mark{font-size:0!important;line-height:0!important;color:transparent!important;background:url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80") center/cover no-repeat!important;min-height:300px!important;border-radius:24px!important;box-shadow:0 15px 36px rgba(21,56,35,.14)}
+@media(max-width:700px){.work-card .work-art{height:165px!important}.feature-mark{min-height:240px!important}}
